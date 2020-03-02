@@ -6,18 +6,16 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
-Icon.loadFont();
-
-const AddItem = ({addItem}) => {
+const AddItem2 = ({addItem}) => {
   const [text, setText] = useState('');
-  const onChange = text => setText(text);
+  const onChange = textValue => setText(textValue);
 
   return (
     <View>
       <TextInput
-        placeholder="Add Item.."
+        placeholder="Add Item..."
         style={styles.input}
         onChangeText={onChange}
         value={text}
@@ -54,4 +52,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default AddItem;
+export default AddItem2;
