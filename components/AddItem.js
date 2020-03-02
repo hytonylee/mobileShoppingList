@@ -1,21 +1,12 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import PropTypes from 'prop-types';
 
-const Header = ({title}) => {
+const AddItem = ({title}) => {
   return (
     <View style={styles.header}>
       <Text style={styles.text}>{title}</Text>
     </View>
   );
-};
-
-Header.defaultProps = {
-  title: 'Shopping List',
-};
-
-Header.propTypes = {
-  title: PropTypes.string.isRequired,
 };
 
 const styles = StyleSheet.create({
@@ -31,4 +22,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Header;
+export default AddItem;
