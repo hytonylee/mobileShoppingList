@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
-import {View, Text, Image, StyleSheet, FlatList} from 'react-native';
+import {View, StyleSheet, FlatList} from 'react-native';
 import Header from './components/Header';
+import AddItem from './components/AddItem';
 import ListItem from './components/ListItem';
 
 const randomId = () => {
@@ -26,6 +27,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Header title="Shopping List" />
+      <AddItem />
       <FlatList
         data={items}
         renderItem={({item}) => (

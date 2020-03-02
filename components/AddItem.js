@@ -1,23 +1,41 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-const AddItem = ({title}) => {
+const AddItem = () => {
+  Icon.loadFont();
   return (
-    <View style={styles.header}>
-      <Text style={styles.text}>{title}</Text>
+    <View>
+      <TextInput placeholder="Add Item.." style={styles.input} />
+      <TouchableOpacity style={styles.btn}>
+        <Text style={styles.btnText}>
+          <Icon name="plus" size={20} /> Add Item
+        </Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  header: {
+  input: {
     height: 60,
-    padding: 15,
-    backgroundColor: 'darkslateblue',
+    padding: 8,
+    fontSize: 16,
   },
-  text: {
-    color: '#fff',
-    fontSize: 23,
+  btn: {
+    backgroundColor: '#c2bad8',
+    padding: 9,
+    margin: 5,
+  },
+  btnText: {
+    color: 'darkslateblue',
+    fontSize: 20,
     textAlign: 'center',
   },
 });
